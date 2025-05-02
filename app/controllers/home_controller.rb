@@ -1,5 +1,30 @@
 class HomeController < ApplicationController
   def index
-    @testimonials = Testimonial.all
+    
   end
+
+  def about
+   end
+
+  def blog
+   end
+
+  def contact
+   end
+
+  def error
+   end  
+
+  def project
+   end
+
+  def service
+   end
+  
+   def team
+    end
+   
+   def testimonial
+     
+   end
 end

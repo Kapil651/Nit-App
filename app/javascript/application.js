@@ -16,3 +16,34 @@ import "controllers"
 
 // Add custom JS if needed
 import "./main" // Custom main.js file
+
+
+import { Application } from "@hotwired/stimulus"
+
+const application = Application.start()
+
+// Configure Stimulus development experience
+application.debug = false
+window.Stimulus   = application
+
+export { application }
+     
+
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+  $('.team-carousel').owlCarousel({
+    loop: true,
+    margin: 30,
+    nav: true,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    dots: false,
+    responsive: {
+      0: { items: 1 },
+      576: { items: 2 },
+      992: { items: 3 },
+      1200: { items: 4 }
+    }
+  });
+});

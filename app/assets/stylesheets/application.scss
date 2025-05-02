@@ -1,2 +1,17 @@
 
 @import "bootstrap.min";
+// Optional: hide scrollbar for horizontal scroll containers
+.d-flex.overflow-auto::-webkit-scrollbar {
+  display: none;
+}
+.d-flex.overflow-auto {
+  -ms-overflow-style: none;  // IE/Edge
+  scrollbar-width: none;     // Firefox
+}
+// app/assets/stylesheets/application.scss
+
+@import "bootstrap"; // This will look for bootstrap.scss in the same folder
+
+// If needed you can also import other partials like
+// @import "bootstrap/scss/variables";
+// @import "bootstrap/scss/mixins";

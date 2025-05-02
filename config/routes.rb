@@ -4,25 +4,25 @@ Rails.application.routes.draw do
 
   # Main routes for pages
   root "home#index"
-  get "about", to: "about#index"
-  get "service", to: "service#index"
-  get "services", to: "services#index"
-  get "projects", to: "projects#index"
-  get "contact", to: "contact#index"
-  get "pages", to: "pages#index"
+  get "about", to: "home#about"
+  get "service", to: "home#service"
+  get "services", to: "home#services"
+  get "projects", to: "home#project"
+  get "contact", to: "home#contact"
+  get "pages", to: "home#pages"
   get 'terms', to: 'pages#terms', as: 'terms'
   get 'privacy_policy', to: 'pages#privacy_policy', as: 'privacy_policy'
   get 'help', to: 'pages#help', as: 'help'
   get 'faq', to: 'pages#faq', as: 'faq'
 
   # Blog routes
-  get 'blog', to: 'blog#index', as: 'blog'
+  get 'blog', to: 'home#blog', as: 'blog'
   
   # Team route
-  get 'team', to: 'team#index', as: 'team'
+  get 'team', to: 'home#team', as: 'team'
   
   # Testimonial route
-  get 'testimonial', to: 'testimonial#index', as: 'testimonial'
+  get 'testimonial', to: 'home#testimonial', as: 'testimonial'
 
   # Resources for blogs (if you need RESTful routes)
   resources :blogs, only: [:index]

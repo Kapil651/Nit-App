@@ -5,6 +5,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+
     <!-- Include your application's CSS -->
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
 
@@ -256,6 +257,11 @@
 
     <!-- Your Custom JavaScript (Main JS file) -->
     <%= javascript_include_tag "main", "data-turbo-track": "reload" %>
+
+
+<!-- JS (before </body>) -->
+<%= javascript_include_tag "https://code.jquery.com/jquery-3.6.0.min.js" %>
+<%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" %>
 
   </body>
 </html>
